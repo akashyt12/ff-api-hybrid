@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ff-api-hybrid
+    runtime: python
+    buildCommand: pip install -r render_requirements.txt
+    startCommand: gunicorn hybrid_server:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
