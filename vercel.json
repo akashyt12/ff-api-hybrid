@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "hybrid_server.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "hybrid_server.py"
+    }
+  ]
+}
